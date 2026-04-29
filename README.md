@@ -22,6 +22,9 @@ A simple and powerful **React + Vite** based web application to create, manage, 
 * ⚡ Vite
 * 🎯 Redux Toolkit
 * 🎨 Tailwind CSS
+* HTML
+* CSS
+* Java Script
 
 ---
 
