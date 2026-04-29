@@ -1,0 +1,54 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Paste from "./components/Paste";
+import ViewPaste from "./components/ViewPaste";
+import './App.css'
+
+const router = createBrowserRouter(
+  [
+    {
+      path:"/",
+      element:
+      <div>
+        <Navbar />
+        <Home />
+      </div>
+    },
+    {
+      path:"/pastes",
+      element:
+      <div>
+        <Navbar />
+        <Paste />
+      </div>
+    },
+    {
+      path:"/pastes/:id",
+      element:
+      <div>
+        <Navbar />
+        <ViewPaste />
+      </div>
+    },
+  ]
+);
+
+// function App() {
+  
+//   return (
+//    <div>
+//      <RouterProvider router={router} />
+//    </div> 
+//   )
+// }
+
+function App() {
+  return (
+   <div className="min-h-screen bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-10">
+     <RouterProvider router={router} />
+   </div> 
+  )
+}
+
+export default App
